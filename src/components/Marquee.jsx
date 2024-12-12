@@ -20,7 +20,7 @@ function Marquee() {
             {...(isLargeScreen ? { 'data-scroll': true, 'data-scroll-section': true, 'data-scroll-speed': '0.02' } : {})}
             className='w-full overflow-hidden py-5 lg:py-10 rounded-tl-3xl rounded-tr-3xl bg-[#004D43] text-white'
         >
-            <div className='text md:border-t md:border-b border-zinc-300 font-foundersGrotesk flex whitespace-nowrap overflow-hidden pr-20 mb-4'>
+            <div className='text :border-t md:border-b border-zinc-300 font-foundersGrotesk flex whitespace-nowrap overflow-hidden pr-20 mb-4'>
                 <motion.h1 initial={{ x: "0" }} animate={{ x: "-100%" }} transition={{ ease: "linear", repeat: Infinity, duration: 5 }} className='uppercase -mt-[2vw] text-[25vw] leading-none font-semibold pr-9'>
                     we are CYLSE
                 </motion.h1>

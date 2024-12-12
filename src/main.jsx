@@ -3,13 +3,14 @@ import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
 import ContactUs from "./components/ContactUs"
+import CrowdManagement from "./components/CrowdManagement"
 import { useEffect } from 'react'
 import { createBrowserRouter, RouterProvider, useLocation } from 'react-router-dom'
 import Layout from './Layout.jsx'
 import LocomotiveScroll from 'locomotive-scroll';
 
 
-const locomotiveScroll = new LocomotiveScroll();
+// const locomotiveScroll = new LocomotiveScroll();
 function ScrollToTop() {
 
   const { pathname } = useLocation();
@@ -35,6 +36,10 @@ const router =createBrowserRouter([
       {
         path:"contact",
         element:<ContactUs/>
+      },
+      {
+        path:"CrowdManagement",
+        element:<CrowdManagement/>
       },
       {
         path:"",

@@ -1,12 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import logo from "../assets/logo.jpeg";
+
 const Footer = () => {
   return (
     <footer className="bg-black text-white p-8">
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row  mb-8">
           <div className="mb-6 md:mb-0">
-            <h2 className="text-6xl   font-foundersGrotesk font-bold mb-4">Have a project<br />in mind?<br />Contact Us!</h2>
+            <h2 className="text-4xl lg:text-6xl   font-foundersGrotesk font-bold mb-4">Have a project<br />in mind?<br />Contact Us!</h2>
             <div className="mt-4">
               {/* <p className="text-sm ml-5 text-gray-400">LET'S CONNECT:</p> */}
              <Link to="/contact" className='group relative px-6 py-4 lg:px-5 lg:py-2 mt-6 lg:mt-3 bg-zinc-900 rounded-full uppercase text-white flex items-center  overflow-hidden w-fit'>
@@ -23,35 +25,26 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 border-t border-gray-700 pt-8">
+        <div className="  grid grid-cols-1 md:grid-cols-4 gap-8 border-t border-gray-700 pt-8">
+          
           <div>
-            <h3 className="text-gray-400 mb-4">UI/UX DESIGN:</h3>
-            <ul className="space-y-2">
-              <li>UX Audit</li>
-              <li>UI Design</li>
-              <li>UX Design</li>
-              <li>UX Research</li>
+            <h3 className="text-gray-400 mb-4 hover:text-white hover:cursor-pointer">PRODUCT DESIGN:</h3>
+            <ul className=" text-gray-600 space-y-2  ">
+             
+              <li className='hover:text-white hover:cursor-pointer'>Web App</li>
+              <li className='hover:text-white hover:cursor-pointer'>Mobile App</li>
+              <li className='hover:text-white hover:cursor-pointer'>Website Design</li>
             </ul>
           </div>
           <div>
-            <h3 className="text-gray-400 mb-4">PRODUCT DESIGN:</h3>
-            <ul className="space-y-2">
-              <li>🔥 AI & ML</li>
-              <li>SaaS</li>
-              <li>Web App</li>
-              <li>Mobile App</li>
-              <li>Website Design</li>
+            <h3 className="text-gray-400 mb-4 hover:text-white hover:cursor-pointer ">AGENCY:</h3>
+            <ul className=" text-gray-600 space-y-2 ">
+              <li className='hover:text-white hover:cursor-pointer'>OUR STORY</li>
+              <li className='hover:text-white hover:cursor-pointer'>CAREERS</li>
             </ul>
-          </div>
-          <div>
-            <h3 className="text-gray-400 mb-4">AGENCY:</h3>
-            <ul className="space-y-2">
-              <li>OUR STORY</li>
-              <li>CAREERS</li>
-            </ul>
-            <div className="mt-4">
-              <p>TERMS OF SERVICES</p>
-              <p>PRIVACY POLICY</p>
+            <div className=" text-gray-600 mt-2">
+              <p className='hover:text-white hover:cursor-pointer'>TERMS OF SERVICES</p>
+              
             </div>
           </div>
           <div>

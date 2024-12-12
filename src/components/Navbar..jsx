@@ -20,15 +20,16 @@ function Navbar() {
         return () => window.removeEventListener('scroll', handleScroll);
     }, [prevScrollPos, visible]);
 
-    useEffect(() => {
-        if (location.hash) {
-            const id = location.hash.replace('#', '');
-            const element = document.getElementById(id);
-            if (element) {
-                element.scrollIntoView({ behavior: 'smooth' });
-            }
-        }
-    }, [location]);
+    // useEffect(() => {
+    //     if (location.hash) {
+    //         const id = location.hash.replace('#', '');
+    //         const element = document.getElementById(id);
+    //         if (element) {
+    //             element.scrollIntoView({ behavior: 'smooth' });
+    //         }
+
+    //     }
+    // }, [location]);
 
     const toggleMenu = () => setIsOpen(!isOpen);
 
@@ -127,7 +128,8 @@ function Navbar() {
                     </div>
                     {/* Mobile Menu Button */}
                     <button onClick={toggleMenu} className="lg:hidden text-3xl focus:outline-none p-2" aria-label="Toggle menu">
-                        ☰
+                       {isOpen? 'X': '☰'
+                       }
                     </button>
                 </div>
                 {/* Mobile Menu */}
