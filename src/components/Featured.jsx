@@ -155,7 +155,7 @@ function Featured() {
                   </motion.span>
                 ))}
               </motion.h1>
-              <Link to="/CrowdManagement">
+              <Link to="/FacialRecognition">
                 <div className="flex items-center justify-center w-full h-full rounded-xl overflow-hidden bg-green-500">
                   <img
                     className="w-full h-[300px] md:h-[500px] object-cover"
