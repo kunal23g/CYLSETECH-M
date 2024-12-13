@@ -3,13 +3,14 @@ import { FaAngleDoubleLeft, FaAngleDoubleRight } from "react-icons/fa";
 import img1 from '../assets/img1.jpg';
 import img2 from '../assets/img2.jpg';
 import img3 from '../assets/img3.jpg';
+import img4 from '../assets/eyeS.jpg';
 
 const ProductSlider = ({ 
   items, 
   autoSlide = false, 
   autoSlideInterval = 3000,
   title = "Featured Products",
-  subtitle = "Explore our latest innovations"
+  
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -43,9 +44,7 @@ const ProductSlider = ({
         <h2 className="text-4xl md:text-7xl font-foundersGrotesk font-bold text-white">
           {title}
         </h2>
-        <p className="text-gray-500 mt-2 text-xl md:text-2xl">
-          {subtitle}
-        </p>
+        
       </div>
 
       {/* Slider Container */}
@@ -137,6 +136,10 @@ const App = () => {
     {
       title: "DELIVERY MANAGEMENT",
       imageUrl: img3,
+    },
+    {
+      title: "FACIAL RECOGNITION",
+      imageUrl: img4,
     }
   ];
 
@@ -144,9 +147,9 @@ const App = () => {
     <ProductSlider 
       items={productItems}
       autoSlide={true}
-      autoSlideInterval={9000}
-      title="Discover Our Latest Products"
-      subtitle="Innovative technology designed for you"
+      autoSlideInterval={7000}
+      title="Discover our innovative technology"
+      
     />
   );
 };
