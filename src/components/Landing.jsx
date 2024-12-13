@@ -147,7 +147,7 @@ const App = () => {
     <ProductSlider 
       items={productItems}
       autoSlide={true}
-      autoSlideInterval={7000}
+      autoSlideInterval={5000}
       title="Discover our innovative technology"
       
     />
