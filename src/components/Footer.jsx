@@ -28,22 +28,22 @@ const Footer = () => {
         <div className="  grid grid-cols-1 md:grid-cols-4 gap-8 border-t border-gray-700 pt-8">
           
           <div>
-            <h3 className="text-gray-400 mb-4 hover:text-white hover:cursor-pointer">PRODUCT DESIGN:</h3>
+            <h3 className="text-gray-400 mb-4 hover:text-white hover:cursor-pointer">PRODUCTS:</h3>
             <ul className=" text-gray-600 space-y-2  ">
              
-              <li className='hover:text-white hover:cursor-pointer'>Web App</li>
-              <li className='hover:text-white hover:cursor-pointer'>Mobile App</li>
-              <li className='hover:text-white hover:cursor-pointer'>Website Design</li>
+              <li className='hover:text-white hover:cursor-pointer'>Crowd Management</li>
+              <li className='hover:text-white hover:cursor-pointer'>Delivery Management</li>
+              <li className='hover:text-white hover:cursor-pointer'>Facial Recogntion</li>
             </ul>
           </div>
           <div>
-            <h3 className="text-gray-400 mb-4 hover:text-white hover:cursor-pointer ">AGENCY:</h3>
+            <h3 className="text-gray-400 mb-4 hover:text-white hover:cursor-pointer ">AGENCY: (coming soon)</h3>
             <ul className=" text-gray-600 space-y-2 ">
-              <li className='hover:text-white hover:cursor-pointer'>OUR STORY</li>
-              <li className='hover:text-white hover:cursor-pointer'>CAREERS</li>
+              <li className='hover:text-white hover:cursor-pointer'>OUR STORY:  (coming soon) </li>
+              <li className='hover:text-white hover:cursor-pointer'>CAREERS: (coming soon)</li>
             </ul>
             <div className=" text-gray-600 mt-2">
-              <p className='hover:text-white hover:cursor-pointer'>TERMS OF SERVICES</p>
+              <p className='hover:text-white hover:cursor-pointer'>TERMS OF SERVICES: (coming soon)</p>
               
             </div>
           </div>
@@ -82,8 +82,8 @@ const Footer = () => {
         </div>
 
         <div className="mt-8 pt-8 border-t border-gray-700 flex justify-between items-center text-sm">
-          <p>CYLSETECH — AI + Product Design Agency.</p>
-          <p>All Rights Reserved © 2024</p>
+          <p>CYLSETECH </p>
+          {/* <p>All Rights Reserved © 2024</p> */}
         </div>
       </div>
     </footer>
