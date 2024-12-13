@@ -4,6 +4,7 @@ import App from './App.jsx'
 import './index.css'
 import ContactUs from "./components/ContactUs"
 import CrowdManagement from "./components/CrowdManagement"
+import FacialRecognition from "./components/FacialRecognition"
 import { useEffect } from 'react'
 import { createBrowserRouter, RouterProvider, useLocation } from 'react-router-dom'
 import Layout from './Layout.jsx'
@@ -40,6 +41,10 @@ const router =createBrowserRouter([
       {
         path:"CrowdManagement",
         element:<CrowdManagement/>
+      },
+      {
+        path:"FacialRecognition",
+        element:<FacialRecognition/>
       },
       {
         path:"",
