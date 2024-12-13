@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import crowd from "../assets/crowd.jpg";
 import delivery from "../assets/delivery.jpg";
+import eye from "../assets/eye.jpg";
 import { motion } from "framer-motion";
 import { FaArrowUpLong } from "react-icons/fa6";
 import { Link } from "react-router-dom";
@@ -8,12 +9,13 @@ import { Link } from "react-router-dom";
 function Featured() {
   const [isHovering1, setHovering1] = useState(false);
   const [isHovering2, setHovering2] = useState(false);
+  const [isHovering3, setHovering3] = useState(false);
 
   return (
     <div id="our-work" className="flex flex-col w-full py-10 lg:py-20 ">
       <div className="flex-none px-8 lg:px-20 border-b-[1px] border-zinc-700 pb-10">
         <h1 className="text-4xl lg:text-7xl font-neueMontreal tracking-tight">
-          Featured Projects
+        Our Products:
         </h1>
       </div>
       <div className="flex-grow px-8 lg:px-20">
@@ -24,7 +26,7 @@ function Featured() {
               <div className="w-2 h-2 bg-zinc-400 rounded-full ml-2"></div>
             </div>
             <a href="https://pacam.io" className="inline-block">
-              <div className="Start mb-3 flex items-center gap-3 group">
+              {/* <div className="Start mb-3 flex items-center gap-3 group">
                 <div className="px-5 py-2 border-[1px] border-zinc-400 font-light uppercase text-xs lg:text-md rounded-full transition-colors duration-300 ease-in-out group-hover:bg-white group-hover:text-black">
                   Start the project
                 </div>
@@ -34,7 +36,7 @@ function Featured() {
                   </span>
                   <span className="absolute inset-0 bg-white transform scale-0 transition-transform duration-300 ease-in-out group-hover:scale-100"></span>
                 </div>
-              </div>
+              </div> */}
             </a>
 
             <motion.div
@@ -83,19 +85,7 @@ function Featured() {
               <span>CROWD</span>
               <div className="w-2 h-2 bg-zinc-400 rounded-full ml-2"></div>
             </div>
-            <a href="https://pacam.io" className="inline-block">
-              <div className="Start mb-3 flex items-center gap-3 group">
-                <div className="px-5 py-2 border-[1px] border-zinc-400 font-light uppercase text-xs lg:text-md rounded-full transition-colors duration-300 ease-in-out group-hover:bg-white group-hover:text-black">
-                  Start the project
-                </div>
-                <div className="w-8 h-8 lg:w-10 lg:h-10 border-[1px] border-zinc-400 flex items-center justify-center rounded-full overflow-hidden relative">
-                  <span className="rotate-[45deg] transition-colors duration-300 ease-in-out text-white group-hover:text-black relative z-10">
-                    <FaArrowUpLong />
-                  </span>
-                  <span className="absolute inset-0 bg-white transform scale-0 transition-transform duration-300 ease-in-out group-hover:scale-100"></span>
-                </div>
-              </div>
-            </a>
+           
             <motion.div
               className="relative flex items-center justify-center h-[50vh] lg:h-[75vh] hover:scale-105 duration-300"
               onMouseEnter={() => setHovering2(true)}
@@ -133,6 +123,58 @@ function Featured() {
               </Link>
             </motion.div>
           </div>
+          <div>
+            <div className="mr-3  inline-flex items-center mb-5 px-5 py-2 border-[1px] border-zinc-400 font-light uppercase text-xs lg:text-md rounded-full hover:bg-white hover:text-black transition-colors duration-300 ease-in-out">
+              <span>FACIAL RECOGNITION</span>
+              <div className="w-2 h-2 bg-zinc-400 rounded-full ml-2"></div>
+            </div>
+            
+            <motion.div
+              className="relative flex items-center justify-center h-[50vh] lg:h-[75vh] hover:scale-105 duration-300"
+              onMouseEnter={() => setHovering3(true)}
+              onMouseLeave={() => setHovering3(false)}
+              animate={{ zIndex: isHovering2 ? 20 : 10 }}
+            >
+              <motion.h1 
+                className="absolute flex overflow-hidden text-[#CDEA68] font-foundersGrotesk text-6xl lg:text-7xl pointer-events-none"
+              >
+                {"FACIAL RECOGNITION".split("").map((item, index) => (
+                  <motion.span
+                    key={index}
+                    className={`inline-block transition-all duration-300 ${
+                      isHovering2 ? 'mx-1' : ''
+                    }`}
+                    initial={{ y: "100%" }}
+                    animate={isHovering3 ? { y: "0%" } : { y: "100%" }}
+                    transition={{
+                      ease: [0.22, 1, 0.36, 1],
+                      delay: index * 0.01,
+                    }}
+                  >
+                    {item === " " ? "\u00A0" : item}
+                  </motion.span>
+                ))}
+              </motion.h1>
+              <Link to="/CrowdManagement">
+                <div className="flex items-center justify-center w-full h-full rounded-xl overflow-hidden bg-green-500">
+                  <img
+                    className="w-full h-[300px] md:h-[500px] object-cover"
+                    src={eye}
+                    alt="PACAM"
+                  />
+                </div>
+              </Link>
+            </motion.div>
+          </div>
+          <div className="flex justify-center items-center ">
+  <Link to="/contact">
+  <button className='justify-center align-center group relative px-6 py-4 lg:px-10 lg:py-6 mt-6 lg:mt-8 bg-zinc-900 border border-white rounded-full uppercase text-white flex items-center justify-between overflow-hidden w-fit'>
+    <span className='relative z-10 transition-colors duration-300 group-hover:text-black'>Contact Us</span>
+    <div className='relative z-10 w-2 h-2 bg-zinc-100 rounded-full ml-4 transition-colors duration-300 group-hover:bg-black'></div>
+    <div className='absolute inset-0 bg-white transform translate-y-full transition-transform duration-300 group-hover:translate-y-0'></div>
+  </button>
+  </Link>
+</div>
         </div>
       </div>
     </div>
